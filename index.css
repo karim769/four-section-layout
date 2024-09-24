@@ -1,0 +1,191 @@
+
+:root
+{
+
+/* Colors */
+
+ /* Primary */
+
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+ /* Neutral */
+
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+
+/* - Font size: 15px */
+
+--Font-size: 15px;
+
+/* Poppins font family */
+
+ --font-family:Poppins;
+
+}
+
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+p{
+    font-weight: 200;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 27px;
+}
+
+body{
+
+    font-family:var(--font-family) ;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Very-Light-Gray);
+}
+
+
+main{
+
+    margin: auto;
+    background-color: var(--Very-Light-Gray);
+    padding:10px 5%;
+}
+
+.text-container{
+
+    text-align:center;
+    max-width: 350px;
+    margin: 3em auto;
+}
+
+.text-container h2{
+
+    font-weight: 200;
+    font-size: 1.7em;
+}
+
+
+.four-feature{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.four-feature .feature{
+
+    border-radius: 7px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 8px 10px -2px var(--Grayish-Blue);
+
+}
+.four-feature >div:nth-of-type(1){
+
+    border-top: 5px solid var(--Cyan);
+
+}
+
+.four-feature >div:nth-of-type(2){
+
+    border-top: 5px solid var(--Red);
+
+}
+
+.four-feature >div:nth-of-type(3){
+
+    border-top: 5px solid var(--Orange);
+
+}
+
+.four-feature >div:nth-of-type(4){
+
+    border-top: 5px solid var(--Blue);
+
+}
+
+.feature p{
+    line-height: 1.7em;
+}
+
+.feature div{
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-top: 25px;
+}
+
+@media(min-width:668px){
+
+
+.four-feature{
+
+        grid-template-columns: auto auto;
+}
+
+
+}
+
+@media(min-width:992px){
+
+
+    main{
+        
+        max-width: 1400px;
+    }
+
+    .four-feature{
+
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas:  " . one  .  " "two . three" " .  four  . ";
+
+    }
+
+    .four-feature >div:nth-of-type(1){
+
+        grid-area: one;
+        grid-row: 1/3;
+    }
+
+    .four-feature >div:nth-of-type(2){
+
+        grid-area: two;
+        grid-row: 2/4;
+    }
+
+
+    .four-feature >div:nth-of-type(3){
+
+        grid-area: three;
+        grid-row: 2/4;
+    }
+
+    .four-feature >div:nth-of-type(4){
+
+        grid-area:four;
+        grid-row: 3/5;
+
+    }
+
+}
+
+
+footer{
+
+    color: black;
+}
